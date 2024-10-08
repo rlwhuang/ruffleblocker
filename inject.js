@@ -8,11 +8,11 @@
 
 (function () {
     // Create a dummy plugin object to mimic the "Shockwave Flash" plugin
-    const pluginData = [{
+    const pluginData = {
       name: "Shockwave Flash",
       filename: "fakeflash.dll",
       description: "Fake Shockwave Flash Plugin"
-    }];
+    };
   
     if (!navigator.plugins.namedItem("Shockwave Flash")) {
         console.log("Flash does not exist.");
@@ -50,7 +50,7 @@
       writeable: true,
       configurable: true,
       enumerable: true,
-      value: pluginData[0]
+      value: pluginData
     });
     
   })();
